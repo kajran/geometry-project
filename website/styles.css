@@ -62,20 +62,21 @@ img:hover {
 	background-color: #81A9EE;
 }
 
-#music {
-	background-color: #48EA91;
+#instructions {
+	background-color: #010419;
 }
 
-#cont {
-	background-color: #F2C74F;
+#download {
+	background-color: #06105e;
 }
 
 
 .omegadiv {
 	height: 97vh;
 	margin: 0 auto;
-	border-style: solid;
-	border-color: blue;
+
+/*	border-style: solid;
+	border-color: blue; */
 }
 
 .sidebardiv {
@@ -83,8 +84,8 @@ img:hover {
 	top: 36%;
 	right: 52%;
 	padding-right: 50px;
-	border-style: solid;
-	border-color: red;
+/*	border-style: solid;
+	border-color: red; */
 }
 
 .contentparent {
@@ -93,8 +94,8 @@ img:hover {
 	
 	position: absolute;
 	left: 48%;
-	border-style: solid;
-	border-color: green;
+/*	border-style: solid;
+	border-color: green; */
 }
 
 .contentdiv {
@@ -107,7 +108,7 @@ img:hover {
 	background-color: #F2C74F;
 }
 
-.musicdiv {
+.instructionsdiv {
 	display: flex;
 	align-items: center;
 	height: 12vh;

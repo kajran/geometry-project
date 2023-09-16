@@ -11,38 +11,18 @@
 				<p>text becomes diagram haha thats pretty cool</p>
 				<br />
 				<h3><a id="pubs_button" href="#publications"></a></h3>
-				<h3><a id="music_button" href="#music">Instructions</a></h3>
-				<h3><a id="cont_button" href="#contact">Download</a></h3>
+				<h3><a id="instructions_button" href="#instructions">Instructions</a></h3>
+				<h3><a id="download_button" href="#downloadact">Download</a></h3>
 			</div>
 			<div id = "content" class="contentparent">
 				<div id="home" class="contentdiv lesspadded">
 					<image id="art" src="crowd.png" title="A crowd gathers around a street performer" style="height: 60vh; max-width: 100%;"></image>
 				</div>
-				<div id="pubs" class="contentdiv padded">
-					<p class="hugemar">Atomic decompositions inside free semilattices. F. Gotti, K. Ajran. Publication pending.</p>
-					<p>On arithmetical aspects of additive monoids of evaluation polynomial semirings. B. Li, J. Bringas, K. Ajran, M. Tirador. Publication pending.</p>
+				<div id="instructions" class="contentdiv padded">
+					<p class="mar">instructions go here</p>
 				</div>
-				<div id="music" class="contentdiv padded">
-					<div class="musicdiv mar">
-						<a href="https://on.soundcloud.com/P3UzL" target="_blank"><image src="ghost.png" alt="Crossroads" style="max-height: 12vh;"></image></a>
-						<a href="https://on.soundcloud.com/P3UzL" target="_blank"><p class="leftmar">Crossroads</p></a>
-					</div>
-					<div class="musicdiv mar">
-						<a href="https://on.soundcloud.com/8vagL" target="_blank"><image src="nervous.png" alt="Nervous System" style="max-height: 12vh;"></image></a>
-						<a href="https://on.soundcloud.com/8vagL" target="_blank"><p class="leftmar">Nervous System (ft. Nito)</p></a>
-					</div>
-					<div class="musicdiv mar">
-						<a href="https://on.soundcloud.com/5B8Wk" target="_blank"><image src="color.png" alt="Eastern Color" style="max-height: 12vh;"></image></a>
-						<a href="https://on.soundcloud.com/5B8Wk" target="_blank"><p class="leftmar">Eastern Color</p></a>
-					</div>
-					<div class="musicdiv mar">
-						<a href="https://on.soundcloud.com/yzAmn" target="_blank"><image src="wowowi.png" alt="Feather" style="max-height: 12vh;"></image></a>
-						<a href="https://on.soundcloud.com/yzAmn" target="_blank"><p class="leftmar">Feather</p></a>
-					</div>
-				</div>
-				<div id="cont" class="contentdiv padded">
-					<p class="bigmar">Email: kajran at mit.edu</p>
-					<p class="mar">Email 2: khalid.ajran at kaust.edu.sa</p>
+				<div id="download" class="contentdiv padded">
+					<p class="mar">download goes here</p>
 				</div>
 			</div>
 		</div>
@@ -61,12 +41,12 @@
 		
 			var home_b = document.getElementById('home_button');
 			var pubs_b = document.getElementById('pubs_button');
-			var music_b = document.getElementById('music_button');
-			var cont_b = document.getElementById('cont_button');
+			var instructions_b = document.getElementById('instructions_button');
+			var download_b = document.getElementById('download_button');
 			var home = document.getElementById('home');
 			var pubs = document.getElementById('pubs');
-			var music = document.getElementById('music');
-			var cont = document.getElementById('cont');
+			var instructions = document.getElementById('instructions');
+			var download = document.getElementById('download');
 			
 			var curr = home;
 			var available = true;
@@ -108,32 +88,32 @@
 					}, sleept)
 				}
 			}
-			music_b.onclick = function () {
-				if (available && curr != music) {
+			instructions_b.onclick = function () {
+				if (available && curr != instructions) {
 					available = false;
 					curr.classList.remove("enteranim");
 					curr.classList.add("exitanim");
-					music.style.display = "block";
-					music.classList.remove("exitanim");
-					music.classList.add("enteranim");
+					instructions.style.display = "block";
+					instructions.classList.remove("exitanim");
+					instructions.classList.add("enteranim");
 					setTimeout(function(){
 						curr.style.display = "none";
-						curr = music;
+						curr = instructions;
 						available = true;
 					}, sleept)
 				}
 			}
-			cont_b.onclick = function () {
-				if (available && curr != cont) {
+			download_b.onclick = function () {
+				if (available && curr != download) {
 					available = false;
 					curr.classList.remove("enteranim");
 					curr.classList.add("exitanim");
-					cont.style.display = "block";
-					cont.classList.remove("exitanim");
-					cont.classList.add("enteranim");
+					download.style.display = "block";
+					download.classList.remove("exitanim");
+					download.classList.add("enteranim");
 					setTimeout(function(){
 						curr.style.display = "none";
-						curr = cont;
+						curr = download;
 						available = true;
 					}, sleept)
 				}
