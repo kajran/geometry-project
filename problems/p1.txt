@@ -1,0 +1,2 @@
+Let ABC be a triangle, and let omega be its circumcircle. Let H be the orthocenter of ABC. Show that the reflection of H across the line segment BC lies on omega. 
+
