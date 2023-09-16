@@ -6,21 +6,31 @@
 	</head>
 	<body>
 		<div id="omegaparent" class="omegadiv">
+		    <!-- Sidebar -->
 			<div class="sidebardiv">
 				<h1><a id="home_button" href="#home"><i>Geometrica</i></a></h1>
 				<p>text becomes diagram haha thats pretty cool</p>
 				<br />
-				<h3><a id="pubs_button" href="#publications"></a></h3>
 				<h3><a id="instructions_button" href="#instructions">Instructions</a></h3>
 				<h3><a id="download_button" href="#downloadact">Download</a></h3>
 			</div>
+			<!-- Content area -->
 			<div id = "content" class="contentparent">
+				<!-- Interface -->
 				<div id="home" class="contentdiv lesspadded">
-					<image id="art" src="crowd.png" title="A crowd gathers around a street performer" style="height: 60vh; max-width: 100%;"></image>
+					<div id="test" class="interfacediv">
+						<textarea id="user_input" class="textbox" placeholder="Describe a geometry problem"></textarea>
+						<button id="run_button" class="enter-btn" onclick="submitForm()">Geometricate</button>
+					</div>
+					<div id="test" class="interfacediv">
+						<p id="output">(◕‿◕)</p>
+					</div>
 				</div>
+				<!-- Instructions -->
 				<div id="instructions" class="contentdiv padded">
 					<p class="mar">instructions go here</p>
 				</div>
+				<!-- Download -->
 				<div id="download" class="contentdiv padded">
 					<p class="mar">download goes here</p>
 				</div>
@@ -28,23 +38,55 @@
 		</div>
 		
 		<script type="text/javascript">
-			var art = document.getElementById('art');
-			const srcs = ["crowd.png", "shimmer.png", "dither_bird.png", "dither_bird_zoom.png", "colorcheckers1.png"];
-			const srcs_len = 5;
-			var src_index = 1;
-			art.onclick = function () {
-				art.src = srcs[src_index];
-				src_index = (src_index + 1)%srcs_len;
+			
+			/* App integration */
+			
+			var run_b = document.getElementById('run_button');
+			var user_in = document.getElementById('user_input');
+			user_in.value = "Sample description goes here";
+			var out = document.getElementById('output');
+			
+			var first_click = true;
+			user_in.onclick = function () {
+				if (first_click) {
+					user_in.value = "";
+					first_click = false;
+				}
+			}
+			
+			/*
+			run_b.onclick = function () {
+				out.textContent = user_in.value;
+			}
+			*/
+			
+			function submitForm() {
+				var inputText = document.getElementById('user_input').value;
+
+				// Send the inputText to your Flask application
+				// You can use AJAX or other methods to send the data to your server
+				// For this example, let's assume you have an API endpoint '/process_text'
+				fetch('/process_text', {
+					method: 'POST',
+					headers: {
+						'Content-Type': 'application/json',
+					},
+					body: JSON.stringify({input_text: inputText}),
+				})
+				.then(response => response.json())
+				.then(data => {
+					// Handle the response from the server if needed
+					// For example, you can update the output element
+					out.textContent = data;
+				})
 			}
 		
-		
+			/* Below: sections and animations */
 		
 			var home_b = document.getElementById('home_button');
-			var pubs_b = document.getElementById('pubs_button');
 			var instructions_b = document.getElementById('instructions_button');
 			var download_b = document.getElementById('download_button');
 			var home = document.getElementById('home');
-			var pubs = document.getElementById('pubs');
 			var instructions = document.getElementById('instructions');
 			var download = document.getElementById('download');
 			
@@ -54,9 +96,9 @@
 			
 			const sleept = 300;
 			
-			home.style.height = "60vh";
+			home.style.height = "80vh";
 			home.style.display = "block";
-			home.style.bottom = "20%";
+			home.style.bottom = "10%";
 			
 			home_b.onclick = function () {
 				if (available && curr != home) {
@@ -73,21 +115,7 @@
 					}, sleept);
 				}
 			}
-			pubs_b.onclick = function () {
-				if (available && curr != pubs) {
-					available = false;
-					curr.classList.remove("enteranim");
-					curr.classList.add("exitanim");
-					pubs.style.display = "block";
-					pubs.classList.remove("exitanim");
-					pubs.classList.add("enteranim");
-					setTimeout(function(){
-						curr.style.display = "none";
-						curr = pubs;
-						available = true;
-					}, sleept)
-				}
-			}
+			
 			instructions_b.onclick = function () {
 				if (available && curr != instructions) {
 					available = false;

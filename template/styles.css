@@ -1,5 +1,5 @@
 @font-face {
-	font-family: Consolas;
+	font-family: Garamond;
 }
 
 
@@ -9,13 +9,12 @@ body {
 
 p {
   color: #41fce6;
-  font-family: Consolas;
+  font-family: Garamond;
 }
 
 a p:hover {
   color: #55fc92;
 }
-
 
 
 a:link {
@@ -41,12 +40,12 @@ a:active {
 
 h1 {
   color: #41fce6;
-  font-family: Consolas;
+  font-family: Garamond;
 }
 
 h3 {
   color: #41fce6;
-  font-family: Consolas;
+  font-family: Garamond;
 }
 
 
@@ -56,10 +55,7 @@ img:hover {
 }
 
 #home {
-	background-color: #2A2B2E;
-}
-#pubs {
-	background-color: #81A9EE;
+	background-color: #030938;
 }
 
 #instructions {
@@ -94,8 +90,9 @@ img:hover {
 	
 	position: absolute;
 	left: 48%;
-/*	border-style: solid;
-	border-color: green; */
+	border-style: solid;
+	border-color: green;
+	border-width: 1px;
 }
 
 .contentdiv {
@@ -106,21 +103,53 @@ img:hover {
 	overflow-y: hidden;
 	
 	background-color: #F2C74F;
+	border-style: solid;
+	border-color: yellow;
+	border-width: 1px;
+}
+
+.interfacediv {
+	display: block;
+	
+	position: relative;
+	left: 0%;
+	height: 50%;
+	width: 100%;
+	overflow-y: hidden;
+	
+	background-color: #030938;
+	border-style: solid;
+	border-color: pink;
+	border-width: 1px;
+}
+
+.textbox {
+    width: 550px;
+    height: 30vh;
+}
+
+.enter-btn {
+    position: absolute;
+    top: 33vh;
+    right: 25px;
+    width: 100px;
+    height: 4vh;
 }
 
 .instructionsdiv {
 	display: flex;
 	align-items: center;
-	height: 12vh;
+	height: 8vh;
 }
 
 .lesspadded {
-	width: 500px;
+	width: 600px;
 	text-align: center;
+	height: 80vh;
 }
 
 .padded {
-	width: 460px;
+	width: 560px;
 	padding-left: 20px;
 	padding-right: 20px;	
 }
@@ -142,8 +171,8 @@ img:hover {
 }
 
 .enteranim {
-	bottom: 20%;
-	height: 60vh;
+	bottom: 10%;
+	height: 80vh;
 	animation-name: enter;
 	animation-duration: 0.3s;
 	animation-timing-function:cubic-bezier(0, 0, -0.5, 1.0);
@@ -153,12 +182,12 @@ img:hover {
 	from {
 		height: 0;
 	} to {
-		height: 60vh;
+		height: 80vh;
 	}
 }
 
 .exitanim {
-	top: 18.1%;
+	top: 6.8%;
 	height: 0;
 	animation-name: exit;
 	animation-duration: 0.3s;
@@ -167,7 +196,7 @@ img:hover {
 
 @keyframes exit {
 	from {
-		height: 60vh;
+		height: 80vh;
 	} to {
 		height: 0;
 	}
