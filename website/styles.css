@@ -1,0 +1,173 @@
+@font-face {
+	font-family: Consolas;
+}
+
+
+body {
+	background-color: #030938;
+}
+
+p {
+  color: #41fce6;
+  font-family: Consolas;
+}
+
+a p:hover {
+  color: #55fc92;
+}
+
+
+
+a:link {
+  
+  text-decoration: none;
+  color: #41fce6;
+}
+
+a:visited {
+  text-decoration: none;
+  color: #41fce6;
+}
+/*rgb(0, 0, 0)*/
+
+a:hover {
+  text-decoration: none;
+  color: #55fc92;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+h1 {
+  color: #41fce6;
+  font-family: Consolas;
+}
+
+h3 {
+  color: #41fce6;
+  font-family: Consolas;
+}
+
+
+img:hover {
+	filter: brightness(115%);
+	cursor: pointer;
+}
+
+#home {
+	background-color: #2A2B2E;
+}
+#pubs {
+	background-color: #81A9EE;
+}
+
+#music {
+	background-color: #48EA91;
+}
+
+#cont {
+	background-color: #F2C74F;
+}
+
+
+.omegadiv {
+	height: 97vh;
+	margin: 0 auto;
+	border-style: solid;
+	border-color: blue;
+}
+
+.sidebardiv {
+	position: absolute;
+	top: 36%;
+	right: 52%;
+	padding-right: 50px;
+	border-style: solid;
+	border-color: red;
+}
+
+.contentparent {
+	height: 97vh;
+	width: 49vw;
+	
+	position: absolute;
+	left: 48%;
+	border-style: solid;
+	border-color: green;
+}
+
+.contentdiv {
+	display: none;
+	
+	position: absolute;
+	left: 0%;
+	overflow-y: hidden;
+	
+	background-color: #F2C74F;
+}
+
+.musicdiv {
+	display: flex;
+	align-items: center;
+	height: 12vh;
+}
+
+.lesspadded {
+	width: 500px;
+	text-align: center;
+}
+
+.padded {
+	width: 460px;
+	padding-left: 20px;
+	padding-right: 20px;	
+}
+
+.mar {
+	margin-top: 15px;
+}
+
+.leftmar {
+	margin-left: 15px;
+}
+
+.bigmar {
+	margin-top: 25vh;
+}
+
+.hugemar {
+	margin-top: 24vh;
+}
+
+.enteranim {
+	bottom: 20%;
+	height: 60vh;
+	animation-name: enter;
+	animation-duration: 0.3s;
+	animation-timing-function:cubic-bezier(0, 0, -0.5, 1.0);
+}
+
+@keyframes enter {
+	from {
+		height: 0;
+	} to {
+		height: 60vh;
+	}
+}
+
+.exitanim {
+	top: 18.1%;
+	height: 0;
+	animation-name: exit;
+	animation-duration: 0.3s;
+	animation-timing-function:cubic-bezier(0, 0, -0.5, 1.0);
+}
+
+@keyframes exit {
+	from {
+		height: 60vh;
+	} to {
+		height: 0;
+	}
+}

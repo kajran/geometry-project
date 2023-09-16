@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>khalid ajran</title>
+		<link rel="stylesheet" href="styles.css"/>
+	</head>
+	<body>
+		<div id="omegaparent" class="omegadiv">
+			<div class="sidebardiv">
+				<h1><a id="home_button" href="#home"><i>Geometrica</i></a></h1>
+				<p>text becomes diagram haha thats pretty cool</p>
+				<br />
+				<h3><a id="pubs_button" href="#publications"></a></h3>
+				<h3><a id="music_button" href="#music">Instructions</a></h3>
+				<h3><a id="cont_button" href="#contact">Download</a></h3>
+			</div>
+			<div id = "content" class="contentparent">
+				<div id="home" class="contentdiv lesspadded">
+					<image id="art" src="crowd.png" title="A crowd gathers around a street performer" style="height: 60vh; max-width: 100%;"></image>
+				</div>
+				<div id="pubs" class="contentdiv padded">
+					<p class="hugemar">Atomic decompositions inside free semilattices. F. Gotti, K. Ajran. Publication pending.</p>
+					<p>On arithmetical aspects of additive monoids of evaluation polynomial semirings. B. Li, J. Bringas, K. Ajran, M. Tirador. Publication pending.</p>
+				</div>
+				<div id="music" class="contentdiv padded">
+					<div class="musicdiv mar">
+						<a href="https://on.soundcloud.com/P3UzL" target="_blank"><image src="ghost.png" alt="Crossroads" style="max-height: 12vh;"></image></a>
+						<a href="https://on.soundcloud.com/P3UzL" target="_blank"><p class="leftmar">Crossroads</p></a>
+					</div>
+					<div class="musicdiv mar">
+						<a href="https://on.soundcloud.com/8vagL" target="_blank"><image src="nervous.png" alt="Nervous System" style="max-height: 12vh;"></image></a>
+						<a href="https://on.soundcloud.com/8vagL" target="_blank"><p class="leftmar">Nervous System (ft. Nito)</p></a>
+					</div>
+					<div class="musicdiv mar">
+						<a href="https://on.soundcloud.com/5B8Wk" target="_blank"><image src="color.png" alt="Eastern Color" style="max-height: 12vh;"></image></a>
+						<a href="https://on.soundcloud.com/5B8Wk" target="_blank"><p class="leftmar">Eastern Color</p></a>
+					</div>
+					<div class="musicdiv mar">
+						<a href="https://on.soundcloud.com/yzAmn" target="_blank"><image src="wowowi.png" alt="Feather" style="max-height: 12vh;"></image></a>
+						<a href="https://on.soundcloud.com/yzAmn" target="_blank"><p class="leftmar">Feather</p></a>
+					</div>
+				</div>
+				<div id="cont" class="contentdiv padded">
+					<p class="bigmar">Email: kajran at mit.edu</p>
+					<p class="mar">Email 2: khalid.ajran at kaust.edu.sa</p>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+			var art = document.getElementById('art');
+			const srcs = ["crowd.png", "shimmer.png", "dither_bird.png", "dither_bird_zoom.png", "colorcheckers1.png"];
+			const srcs_len = 5;
+			var src_index = 1;
+			art.onclick = function () {
+				art.src = srcs[src_index];
+				src_index = (src_index + 1)%srcs_len;
+			}
+		
+		
+		
+			var home_b = document.getElementById('home_button');
+			var pubs_b = document.getElementById('pubs_button');
+			var music_b = document.getElementById('music_button');
+			var cont_b = document.getElementById('cont_button');
+			var home = document.getElementById('home');
+			var pubs = document.getElementById('pubs');
+			var music = document.getElementById('music');
+			var cont = document.getElementById('cont');
+			
+			var curr = home;
+			var available = true;
+			
+			
+			const sleept = 300;
+			
+			home.style.height = "60vh";
+			home.style.display = "block";
+			home.style.bottom = "20%";
+			
+			home_b.onclick = function () {
+				if (available && curr != home) {
+					available = false;
+					curr.classList.remove("enteranim");
+					curr.classList.add("exitanim");
+					home.style.display = "block";
+					home.classList.remove("exitanim");
+					home.classList.add("enteranim");
+					setTimeout(function(){
+						curr.style.display = "none";
+						curr = home;
+						available = true;
+					}, sleept);
+				}
+			}
+			pubs_b.onclick = function () {
+				if (available && curr != pubs) {
+					available = false;
+					curr.classList.remove("enteranim");
+					curr.classList.add("exitanim");
+					pubs.style.display = "block";
+					pubs.classList.remove("exitanim");
+					pubs.classList.add("enteranim");
+					setTimeout(function(){
+						curr.style.display = "none";
+						curr = pubs;
+						available = true;
+					}, sleept)
+				}
+			}
+			music_b.onclick = function () {
+				if (available && curr != music) {
+					available = false;
+					curr.classList.remove("enteranim");
+					curr.classList.add("exitanim");
+					music.style.display = "block";
+					music.classList.remove("exitanim");
+					music.classList.add("enteranim");
+					setTimeout(function(){
+						curr.style.display = "none";
+						curr = music;
+						available = true;
+					}, sleept)
+				}
+			}
+			cont_b.onclick = function () {
+				if (available && curr != cont) {
+					available = false;
+					curr.classList.remove("enteranim");
+					curr.classList.add("exitanim");
+					cont.style.display = "block";
+					cont.classList.remove("exitanim");
+					cont.classList.add("enteranim");
+					setTimeout(function(){
+						curr.style.display = "none";
+						curr = cont;
+						available = true;
+					}, sleept)
+				}
+			}
+		</script>
+    </body>
+</html>
+
+
+<!--			<div id="===DISPLAY==="
+				 style="width: 360px;
+						height: 58vh;
+						border: blue outset 3px;
+						
+						position: absolute;
+						top: 0;
+						left: 240px;
+						
+						padding: 0vh 20px 2vh 20px">
+				<p>dummkopfs!!</p>
+			</div> -->
