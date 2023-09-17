@@ -1,0 +1,28 @@
+Let $\triangle ABC$ be an acute-angled triangle with $AB \not= AC$. Let $H$ be the orthocenter of triangle $ABC$, and let $M$ be the midpoint of the side $BC$. Let $D$ be a point on the side $AB$ and $E$ a point on the side $AC$ such that $AE=AD$ and the points $D$, $H$, $E$ are on the same line. Prove that the line $HM$ is perpendicular to the common chord of the circumscribed circles of triangle $\triangle ABC$ and triangle $\triangle ADE$.
+
+Asymptote_code_below:
+
+
+pair A = 1.5*dir(70);
+pair B = origin;
+pair C = (2,0);
+pair M = (B+C)/2;
+
+pair H = orthocenter(A,B,C);
+pair D = point(A--B,intersections(A--B,H,K)[0]);
+pair E = point(A--C,intersections(A--C,H,K)[0]);
+
+draw(A--B--C--cycle);
+draw(D--E, grey);
+draw(H--M, grey);
+
+dot("$A$",A,dir(90));
+dot("$B$",B,dir(200));
+dot("$C$",C,dir(-40));
+
+dot("$M$",M,dir(-90));
+dot("$H$",H,dir(100));
+dot("$D$",D,dir(150));
+dot("$E$",E,dir(40));
+
+
