@@ -1,0 +1,18 @@
+Let ABC be a triangle. The incircle of $\triangle ABC$ is tangent to $\overline{AB}$ at $\overline{AC}$ and D and E respectively. Let O denote the circumcenter of $\triangle BCI$. Prove that $\angle ODB = \angle OEC$.
+
+
+Asymptote_Code_Below:
+
+
+
+A = dir 110
+B = dir 210
+C = dir 330
+A--B--C--cycle 0.1 lightcyan / lightblue
+O = dir -90
+I = incenter A B C R90
+D = foot I A B
+E = foot I A C
+incircle A B C dashed lightblue
+B--I--C lightblue
+D--O--E heavygreen
