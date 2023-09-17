@@ -379,6 +379,34 @@ print("frontend", frontend_path)
 )
 @asgi_app(label="hack-app")
 def app():
+
+    import http
+    import requests
+    import json
+    
+    def code_to_svg(input_code):
+        asymptote_url = "http://asymptote.ualberta.ca"
+        
+        # Create a dictionary containing the input data
+        data_input = {"codeText": input_code, "reqType": "run", "id": "V3pI", "workspaceid": 1, "workspaceName": "workspace", "isUpdated": True}
+        
+        # Send a POST request to the Asymptote web interface
+        response = requests.post(asymptote_url, data=data_input)
+        
+        print(response)
+        
+        # Check if the request was successful and print the response
+        if response.status_code == 200:
+            print("Response from Asymptote:")
+            print(response.text)
+        else:
+            print("Failed to send the request.")
+        
+        url2 = asymptote_url + response.json()['path']
+        
+        #     response2 = requests.get(asymptote_url + response.json()['path'])
+        #     print(response2.text)
+        return url2
     # import json
 
     # import fastapi
