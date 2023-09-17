@@ -1,0 +1,27 @@
+Let ABC be an acute triangle with orthocenter H, and let W be a point on the side BC, between B and C. The points M and N are the feet of the altitudes drawn from B and C, respectively. Suppose ω1 is the circumcircle of triangle BW N and
+X is a point such that W X is a diameter of ω1. Similarly, ω2 is the circumcircle of triangle CWM and Y is a point such that W Y is a diameter of ω2. Show that the points X, Y , and H are collinear.
+
+
+
+Asymptote_Code_Below:
+
+A = dir 110
+B = dir 210
+C = dir 330
+M = foot B A C
+N = foot C A B
+B--M
+C--N
+A--B--C--cycle 0.1 lightcyan / lightblue
+B--M lightblue
+C--N lightblue
+W = 0.55*C+0.45*B
+H = A+B+C
+P = foot H A W R30
+X = extension P H B B+A-H
+Y = extension P H C C+A-H
+circumcircle B N W 0.1 lightgreen / heavygreen
+circumcircle C M W 0.1 lightgreen / heavygreen
+X--W--Y heavygreen
+B--X lightblue
+C--Y lightblue
