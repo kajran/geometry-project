@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>khalid ajran</title>
-		<link rel="stylesheet" href="styles.css"/>
+		<title>Geometrica</title>
+		<link rel="stylesheet" href="{{ url_for('static', path='styles.css') }}">
 	</head>
 	<body>
 		<div class="tiledBackground"></div>
@@ -12,7 +12,7 @@
 				<h1><a id="home_button" href="#home"><i>Geometrica</i></a></h1>
 				<p>text becomes diagram haha thats pretty cool</p>
 				<br />
-				<h3><a id="instructions_button" href="#instructions">Instructions</a></h3>
+				<h3><a id="instructions_button" href="#instructions">About</a></h3>
 				<h3><a id="download_button" href="#downloadact">Download</a></h3>
 			</div>
 			<!-- Content area -->
@@ -20,11 +20,17 @@
 				<!-- Interface -->
 				<div id="home" class="contentdiv lesspadded">
 					<div id="test" class="interfacediv" style="height: 40%;">
-						<textarea id="user_input" class="textbox" placeholder="Describe a geometry problem"></textarea>
-						<button id="run_button" class="enter-btn" onclick="submitForm()">Geometricate</button>
+						<form method="post">
+							<textarea type="text" name="user_input" id="user_input" class="textbox" placeholder="Describe a geometry problem"></textarea>
+							<button type="submit" id="run_button" class="enter-btn">Geometricate</button>
+						</form>
 					</div>
 					<div id="test" class="interfacediv" style="height: 60%;">
-						<p id="output">(◕‿◕)</p>
+						{% if capitalized_text %}
+							<p id="output">{{ capitalized_text }}</p>
+						{% else %}
+							<p id="output">(◕‿◕)</p>
+						{% endif %}
 					</div>
 				</div>
 				<!-- Instructions -->
@@ -60,6 +66,8 @@
 				out.textContent = user_in.value;
 			}
 			*/
+			
+
 			
 			function submitForm() {
 				var inputText = document.getElementById('user_input').value;
