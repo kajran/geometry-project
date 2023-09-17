@@ -70,17 +70,20 @@ img:hover {
 .omegadiv {
 	height: 97vh;
 	margin: 0 auto;
-	border-style: solid;
-	border-color: blue;
+/*	border-style: solid;
+	border-color: blue; 
+	border-width: 1px; */
 }
 
 .sidebardiv {
 	position: absolute;
 	top: 36%;
 	right: 52%;
+	left: 16%;
 	padding-right: 50px;
 /*	border-style: solid;
-	border-color: red; */
+	border-color: blue; 
+	border-width: 1px; */
 }
 
 .contentparent {
@@ -89,9 +92,9 @@ img:hover {
 	
 	position: absolute;
 	left: 48%;
-	border-style: solid;
-	border-color: green;
-	border-width: 1px;
+/*	border-style: solid;
+	border-color: blue; 
+	border-width: 1px; */
 }
 
 .contentdiv {
@@ -102,9 +105,9 @@ img:hover {
 	overflow-y: hidden;
 	
 	background-color: transparent;
-	border-style: solid;
-	border-color: yellow;
-	border-width: 1px;
+/*	border-style: solid;
+	border-color: blue; 
+	border-width: 1px; */
 }
 
 .interfacediv {
@@ -116,9 +119,9 @@ img:hover {
 	overflow-y: hidden;
 	
 
-	border-style: solid;
-	border-color: pink;
-	border-width: 1px;
+/*	border-style: solid;
+	border-color: blue; 
+	border-width: 1px; */
 }
 
 .textbox {
@@ -148,9 +151,9 @@ img:hover {
 }
 
 .padded {
-	width: 560px;
-	padding-left: 20px;
-	padding-right: 20px;	
+	width: 400px;
+	padding-left: 100px;
+	padding-right: 100px;	
 }
 
 .mar {

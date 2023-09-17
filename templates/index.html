@@ -10,7 +10,7 @@
 		    <!-- Sidebar -->
 			<div class="sidebardiv">
 				<h1><a id="home_button" href="#home"><i>Geometrica</i></a></h1>
-				<p>text becomes diagram haha thats pretty cool</p>
+				<p>Web tool for turning geometry descriptions into neat diagrams</p>
 				<br />
 				<h3><a id="instructions_button" href="#instructions">About</a></h3>
 				<h3><a id="download_button" href="#downloadact">Download</a></h3>
@@ -29,17 +29,17 @@
 						{% if capitalized_text %}
 							<p id="output">{{ capitalized_text }}</p>
 						{% else %}
-							<p id="output">(◕‿◕)</p>
+							<p id="output">(◕‿◕) awesome sample diagram goes here (◕‿◕)</p>
 						{% endif %}
 					</div>
 				</div>
 				<!-- Instructions -->
 				<div id="instructions" class="contentdiv padded">
-					<p class="mar">instructions go here</p>
+					<p class="mar" style="margin-top: 32vh;">Type a description of a geometric construction, and this tool will convert it into a diagram! The description can be a formal problem statement or a loose description.</p>
 				</div>
 				<!-- Download -->
 				<div id="download" class="contentdiv padded">
-					<p class="mar">download goes here</p>
+					<p class="mar" style="margin-top: 38vh;">Download: Link.link.link</p>
 				</div>
 			</div>
 		</div>
@@ -50,7 +50,7 @@
 			
 			var run_b = document.getElementById('run_button');
 			var user_in = document.getElementById('user_input');
-			user_in.value = "Sample description goes here";
+			user_in.value = "Let ABC be a triangle, and let H be its orthocenter. Let X be the reflection of H about the edge BC. Show that ABCX is a cyclic quadrilateral.";
 			var out = document.getElementById('output');
 			
 			var first_click = true;
