@@ -1,0 +1,20 @@
+Points A, B, C, D, E lie on a circle ω and point P lies outside the circle. The given points are such that (i) lines PB and P D are tangent to ω, (ii) P, A, C are collinear,
+and (iii) DE is parallel to AC. Prove that BE bisects AC.
+
+Asymptote_code_below: 
+
+B = dir 100
+D = dir 210
+E = dir 330
+P = 2*B*D/(B+D)
+A = IP P--(P+8*(E-D)) unitcircle
+M = extension B E A P R45
+C = 2*M-A R100
+
+unitcircle 0.1 lightblue / lightblue
+P--A lightblue
+B--P--D lightblue
+D--E heavygreen
+A--E--C heavygreen
+
+B--A--D--C--cycle heavycyan
