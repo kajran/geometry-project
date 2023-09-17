@@ -1,0 +1,24 @@
+Let $AXYZB$ be a convex pentagon inscribed in a semicircle of diameter $AB$. Denote by $P, Q, R, S$ the feet of the perpendiculars from $Y$ onto lines $AX, BX, AZ, BZ$, respectively. Prove that the acute angle formed by lines $PQ$ and $RS$ is half the size of $\angle XOZ$, where $O$ is the midpoint of segment $AB$.
+
+Asymptote_Code_Below:
+
+A = dir 180
+B = dir 0
+X = dir 140
+Y = dir 100
+Z = dir 60
+
+P = foot Y A X
+Q = foot Y B X
+R = foot Y A Z
+
+
+A--X--Y--Z--B orange
+unitcircle 0.1 orange / red
+
+Y--P red
+Y--Q red
+Y--R red
+Y--S red
+P--X--B brown
+S--Z--A brown
