@@ -1,4 +1,4 @@
-Let ABC be a triangle. The incircle of $\triangle ABC$ is tangent to $\overline{AB}$ at $\overline{AC}$ and D and E respectively. Let O denote the circumcenter of $\triangle BCI$. Prove that $\angle ODB = \angle OEC$.
+Let ABC be a triangle. The incircle of triangle ABC is tangent to AB and AC at D and E respectively. Let O denote the circumcenter of triangle BCI. Prove that angles ODB and OEC are equal.
 
 
 Asymptote_Code_Below:
