@@ -1,0 +1,30 @@
+Let ABC be a triangle, and let $D$, $E$, and $F$ denote the feet of the altitudes from $A$, $B$, and $C$, respectively. Then, $\triangle DEF$ is called the orthic triangle of $\triangle ABC$.
+
+
+
+Asymptote_Code_Below:
+
+
+pair A = dir(110);
+pair B = dir(210);
+pair C = dir(330);
+draw(A--B--C--cycle);
+
+dot("$A$", A, dir(110));
+dot("$B$", B, B);
+dot("$C$", C, C);
+
+pair H = A+B+C;
+dot("$H$", H, dir(100));
+
+pair D = foot(A, B, C);
+pair E = foot(B, C, A);
+pair F = foot(C, A, B);
+
+dot("$D$", D, dir(-90));
+dot("$E$", E, dir(50));
+dot("$F$", F, dir(110));
+
+draw(A--D);
+draw(B--E);
+draw(C--F);
